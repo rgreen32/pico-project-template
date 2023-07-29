@@ -21,7 +21,7 @@ pico_sdk_init()
 include(example_auto_set_url.cmake)
 
 # Add projects here
-add_subdirectory(test)
+add_subdirectory(blink)
 
 
 add_compile_options(-Wall
