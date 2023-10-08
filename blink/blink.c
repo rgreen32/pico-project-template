@@ -2,7 +2,7 @@
 
 #if BOARD != PICO_W
 
-#include "pico/cyw43_arch.h"
+#include "pico/stdlib.h"
 int main() {
     const uint LED_PIN = PICO_DEFAULT_LED_PIN;
     gpio_init(LED_PIN);
@@ -16,7 +16,7 @@ int main() {
 }
 #else
 
-#include "pico/stdlib.h"
+#include "pico/cyw43_arch.h"
 int main() {
     stdio_init_all();
     if (cyw43_arch_init()) {
